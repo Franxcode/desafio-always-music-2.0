@@ -3,7 +3,7 @@ const figlet = require('figlet');
 
 const mostrarBienvenida = async() => {
 	console.clear();
-	figlet('Escuela de Música          Always Music', {
+	figlet('Escuela de Música      Always Music 2.0', {
 		horizontalLayout: "fitted",
 		width: 100,
 		whitespaceBreak: true,
