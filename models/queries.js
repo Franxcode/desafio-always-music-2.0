@@ -61,6 +61,7 @@ class Queries{
 
             return estudiante;       
         } catch (error) {
+            console.log(error);
             console.log(`El alumno con rut ${input.rut}, ya existe en la base de datos, verifique la información y vuelva a intentarlo.`.bgRed.brightWhite);
         }
     };
@@ -221,11 +222,7 @@ class Queries{
         console.log(result);
       };
 
-      serverDisconnect = async() => {
-          const client = await this.pool.connect();
-          client.release();
-          this.pool.end();
-      }
+      serverDisconnect = async() => await this.pool.end();
 };
 
 module.exports = Queries;

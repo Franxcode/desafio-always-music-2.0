@@ -83,6 +83,7 @@ const main = async () => {
 
 	queries.serverDisconnect();
 	mostrarSalida();
+	process.exit(0);
 
 };
 main();
